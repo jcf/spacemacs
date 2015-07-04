@@ -14,7 +14,7 @@
   "Templates directory.")
 
 (defconst dotspacemacs-filepath
-  (concat user-home-directory ".spacemacs")
+  (concat user-emacs-directory "jcf.el")
   "Filepath to the installed dotfile.")
 
 (defvar dotspacemacs-verbose-loading nil
