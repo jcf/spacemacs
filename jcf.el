@@ -27,6 +27,7 @@
      elixir
      emacs-lisp
      erc
+     erlang
      evernote
      extra-langs
      git
