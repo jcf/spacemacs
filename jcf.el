@@ -41,6 +41,8 @@
      markdown
      ocaml
      org
+     (osx :variables
+          osx-use-option-as-meta nil)
      (shell :variables
             shell-default-height 30
             shell-default-position 'bottom)
@@ -195,6 +197,22 @@ layers configuration."
   (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
   (define-key evil-visual-state-map "j" 'evil-next-visual-line)
   (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
+
+  ;; Take back the option key so we can type #
+  (setq mac-option-key-is-meta nil)
+  (setq mac-command-key-is-meta nil)
+  (setq mac-command-modifier nil)
+  (setq mac-option-modifier nil)
+  (define-key window-numbering-keymap "\M-0" nil)
+  (define-key window-numbering-keymap "\M-1" nil)
+  (define-key window-numbering-keymap "\M-2" nil)
+  (define-key window-numbering-keymap "\M-3" nil)
+  (define-key window-numbering-keymap "\M-4" nil)
+  (define-key window-numbering-keymap "\M-5" nil)
+  (define-key window-numbering-keymap "\M-6" nil)
+  (define-key window-numbering-keymap "\M-7" nil)
+  (define-key window-numbering-keymap "\M-8" nil)
+  (define-key window-numbering-keymap "\M-9" nil)
 
   (custom-set-faces
    '(evil-search-highlight-persist-highlight-face
