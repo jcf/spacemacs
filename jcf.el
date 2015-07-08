@@ -106,6 +106,8 @@ layers configuration."
    vc-follow-symlinks t
    )
 
+  (push '(email-obfuscation . "references") org-pandoc-options)
+
   ;; Make evil-mode up/down operate in screen lines instead of logical lines
   (define-key evil-motion-state-map "j" 'evil-next-visual-line)
   (define-key evil-motion-state-map "k" 'evil-previous-visual-line)
