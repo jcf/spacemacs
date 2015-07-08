@@ -40,7 +40,9 @@
      latex
      markdown
      ocaml
-     org
+     (org :variables
+          org-enable-github-support t
+          org-enable-pandoc-support t)
      (osx :variables
           osx-use-option-as-meta nil)
      (shell :variables
