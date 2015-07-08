@@ -201,7 +201,7 @@ layers configuration."
   ;; Take back the option key so we can type #
   (setq mac-option-key-is-meta nil)
   (setq mac-command-key-is-meta nil)
-  (setq mac-command-modifier nil)
+  (setq mac-command-modifier 'super)
   (setq mac-option-modifier nil)
   (define-key window-numbering-keymap "\M-0" nil)
   (define-key window-numbering-keymap "\M-1" nil)
