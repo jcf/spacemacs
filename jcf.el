@@ -121,16 +121,6 @@ layers configuration."
   (setq mac-command-key-is-meta nil)
   (setq mac-command-modifier 'super)
   (setq mac-option-modifier nil)
-  (define-key window-numbering-keymap "\M-0" nil)
-  (define-key window-numbering-keymap "\M-1" nil)
-  (define-key window-numbering-keymap "\M-2" nil)
-  (define-key window-numbering-keymap "\M-3" nil)
-  (define-key window-numbering-keymap "\M-4" nil)
-  (define-key window-numbering-keymap "\M-5" nil)
-  (define-key window-numbering-keymap "\M-6" nil)
-  (define-key window-numbering-keymap "\M-7" nil)
-  (define-key window-numbering-keymap "\M-8" nil)
-  (define-key window-numbering-keymap "\M-9" nil)
 
   (push '("medley" . "medley.core") cljr-magic-require-namespaces)
 
