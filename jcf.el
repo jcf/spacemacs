@@ -132,6 +132,8 @@ layers configuration."
   (define-key window-numbering-keymap "\M-8" nil)
   (define-key window-numbering-keymap "\M-9" nil)
 
+  (push '("medley" . "medley.core") cljr-magic-require-namespaces)
+
   (custom-set-faces
    '(evil-search-highlight-persist-highlight-face
      ((t (:background "Black")))))
