@@ -116,11 +116,12 @@ layers configuration."
   (define-key evil-visual-state-map "j" 'evil-next-visual-line)
   (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
 
-  ;; Take back the option key so we can type #
-  (setq mac-option-key-is-meta nil)
-  (setq mac-command-key-is-meta nil)
-  (setq mac-command-modifier 'super)
-  (setq mac-option-modifier nil)
+  (when (system-is-mac)
+    ;; Take back the option key so we can type #
+    (setq mac-option-key-is-meta nil)
+    (setq mac-command-key-is-meta nil)
+    (setq mac-command-modifier 'super)
+    (setq mac-option-modifier nil))
 
   (push '("medley" . "medley.core") cljr-magic-require-namespaces)
 
