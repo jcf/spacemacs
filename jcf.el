@@ -106,6 +106,8 @@ layers configuration."
    vc-follow-symlinks t
    )
 
+  (evil-leader/set-key ":" 'helm-M-x)
+
   (push '(email-obfuscation . "references") org-pandoc-options)
 
   ;; Make evil-mode up/down operate in screen lines instead of logical lines
