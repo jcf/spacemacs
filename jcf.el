@@ -55,7 +55,7 @@
    dotspacemacs-additional-packages '(
                                       edts
                                       lfe-mode
-                                      ox-lfe
+                                      ob-lfe
                                       )
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
