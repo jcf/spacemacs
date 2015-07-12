@@ -23,6 +23,13 @@
 (defun erlang/init-erlang ()
   (use-package erlang
     :defer t
+    :mode ((".*\\.app\\'" . erlang-mode)
+           (".*\\.escript\\'" . erlang-mode)
+           (".*\\.rel\\'" . erlang-mode)
+           (".*\\.script\\'" . erlang-mode)
+           (".*app\\.src\\'" . erlang-mode)
+           ("app\\.config\\'" . erlang-mode)
+           ("rebar\\.config\\'" . erlang-mode))
     :init
     (progn
       ;; explicitly run prog-mode hooks since erlang mode does is not

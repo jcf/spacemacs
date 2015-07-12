@@ -53,7 +53,6 @@
      version-control
      )
    dotspacemacs-additional-packages '(
-                                      edts
                                       lfe-mode
                                       ob-lfe
                                       )
