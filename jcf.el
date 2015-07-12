@@ -112,7 +112,12 @@ layers configuration."
 
   (evil-leader/set-key ":" 'helm-M-x)
 
-  (push '(email-obfuscation . "references") org-pandoc-options)
+  ;; Set Pandoc export options when org-mode fires up
+  (when org-enable-pandoc-support
+    (add-hook
+     'org-mode-hook
+     (lambda ()
+       (push '(email-obfuscation . "references") org-pandoc-options))))
 
   ;; Make evil-mode up/down operate in screen lines instead of logical lines
   (define-key evil-motion-state-map "j" 'evil-next-visual-line)
