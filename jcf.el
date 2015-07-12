@@ -52,7 +52,11 @@
      vagrant
      version-control
      )
-   dotspacemacs-additional-packages '()
+   dotspacemacs-additional-packages '(
+                                      edts
+                                      lfe-mode
+                                      ox-lfe
+                                      )
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
 
