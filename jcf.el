@@ -132,7 +132,10 @@ layers configuration."
     (setq mac-command-modifier 'super)
     (setq mac-option-modifier nil))
 
-  (push '("medley" . "medley.core") cljr-magic-require-namespaces)
+  (add-hook
+   'clojure-mode-hook
+   (lambda ()
+     (push '("medley" . "medley.core") cljr-magic-require-namespaces)))
 
   (custom-set-faces
    '(evil-search-highlight-persist-highlight-face
