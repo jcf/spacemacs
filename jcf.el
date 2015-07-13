@@ -132,7 +132,7 @@ layers configuration."
     (setq mac-option-modifier nil))
 
   (add-hook
-   'clojure-mode-hook
+   'clj-refactor-mode-hook
    (lambda ()
      (push '("medley" . "medley.core") cljr-magic-require-namespaces)))
 
