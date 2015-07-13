@@ -26,6 +26,7 @@
      gtags
      haskell
      html
+     java
      javascript
      latex
      markdown
