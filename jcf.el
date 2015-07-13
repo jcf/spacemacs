@@ -104,6 +104,10 @@ before layers configuration."
  This function is called at the very end of Spacemacs initialization after
 layers configuration."
   (setq
+   cider-repl-history-file (expand-file-name
+                            ".cider-history" spacemacs-cache-directory)
+   cider-repl-history-size 1000
+   cider-repl-wrap-history t
    clojure-enable-fancify-symbols t
    powerline-default-separator nil
    vc-follow-symlinks t
