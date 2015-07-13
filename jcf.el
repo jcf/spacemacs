@@ -54,6 +54,7 @@
      )
    dotspacemacs-additional-packages '(
                                       lfe-mode
+                                      slamhound
                                       ob-lfe
                                       )
    dotspacemacs-excluded-packages '()
