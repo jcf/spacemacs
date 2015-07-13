@@ -44,6 +44,7 @@
      racket
      restclient
      ruby
+     ruby-on-rails
      rust
      scala
      shell-scripts
