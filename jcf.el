@@ -132,6 +132,9 @@ layers configuration."
   (evil-declare-key 'normal cider-test-report-mode-map
     "q" 'cider-popup-buffer-quit-function)
 
+  ;; Start an interactive Elisp REPL
+  (evil-leader/set-key "ai" 'ielm)
+
   (when (system-is-mac)
     ;; Take back the option key so we can type #
     (setq mac-option-key-is-meta nil)
