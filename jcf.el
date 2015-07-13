@@ -128,6 +128,10 @@ layers configuration."
   (define-key evil-visual-state-map "j" 'evil-next-visual-line)
   (define-key evil-visual-state-map "k" 'evil-previous-visual-line)
 
+  ;; Quit cider-test-mode when we press `q'
+  (evil-declare-key 'normal cider-test-report-mode-map
+    "q" 'cider-popup-buffer-quit-function)
+
   (when (system-is-mac)
     ;; Take back the option key so we can type #
     (setq mac-option-key-is-meta nil)
