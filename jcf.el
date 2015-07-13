@@ -12,6 +12,7 @@
      c-c++
      clojure
      dash
+     django
      dockerfile
      elixir
      emacs-lisp
