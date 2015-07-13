@@ -139,10 +139,13 @@ layers configuration."
     (setq mac-command-modifier 'super)
     (setq mac-option-modifier nil))
 
+  ;; Add magic requires that modify the namespace if a require is missing when
+  ;; it's alias is used.
   (add-hook
    'clj-refactor-mode-hook
    (lambda ()
-     (push '("medley" . "medley.core") cljr-magic-require-namespaces)))
+     (push '("medley" . "medley.core") cljr-magic-require-namespaces)
+     (push '("s" . "schema.core") cljr-magic-require-namespaces)))
 
   (custom-set-faces
    '(evil-search-highlight-persist-highlight-face
