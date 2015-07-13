@@ -150,7 +150,7 @@ layers configuration."
   (custom-set-faces
    '(evil-search-highlight-persist-highlight-face
      ((t (:background "Black")))))
-)
+  )
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
