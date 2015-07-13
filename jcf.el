@@ -134,7 +134,7 @@ layers configuration."
     "q" 'cider-popup-buffer-quit-function)
 
   ;; Start an interactive Elisp REPL
-  (evil-leader/set-key "ai" 'ielm)
+  (evil-leader/set-key "aI" 'ielm)
 
   (when (system-is-mac)
     ;; Take back the option key so we can type #
