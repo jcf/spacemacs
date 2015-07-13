@@ -152,10 +152,6 @@ layers configuration."
    (lambda ()
      (push '("medley" . "medley.core") cljr-magic-require-namespaces)
      (push '("s" . "schema.core") cljr-magic-require-namespaces)))
-
-  (custom-set-faces
-   '(evil-search-highlight-persist-highlight-face
-     ((t (:background "Black")))))
   )
 
 ;; Do not write anything past this comment. This is where Emacs will
