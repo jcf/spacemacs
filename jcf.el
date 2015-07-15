@@ -140,6 +140,9 @@ layers configuration."
   ;; Start an interactive Elisp REPL
   (evil-leader/set-key "aI" 'ielm)
 
+  ;; Delete other windows giving focus to the current
+  (evil-leader/set-key "wf" 'delete-other-windows)
+
   (when (system-is-mac)
     ;; Take back the option key so we can type #
     (setq mac-option-key-is-meta nil)
