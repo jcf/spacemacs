@@ -20,7 +20,9 @@
      erlang
      evernote
      extra-langs
-     git
+     (git :variables
+          git-magit-status-fullscreen t
+          magit-repository-directories '("~/Code/"))
      github
      go
      gtags
