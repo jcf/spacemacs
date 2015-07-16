@@ -116,6 +116,8 @@ before layers configuration."
 layers configuration."
   (setq
    powerline-default-separator nil
+   user-full-name "James Conroy-Finn"
+   user-mail-address "james@logi.cl"
    vc-follow-symlinks t)
 
   (evil-leader/set-key ":" 'helm-M-x)
