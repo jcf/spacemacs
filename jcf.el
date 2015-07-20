@@ -94,7 +94,7 @@ before layers configuration."
    dotspacemacs-auto-save-file-location 'cache
    dotspacemacs-use-ido nil
    dotspacemacs-enable-paste-micro-state nil
-   dotspacemacs-guide-key-delay 0.4
+   dotspacemacs-guide-key-delay 0.6
    dotspacemacs-loading-progress-bar t
    dotspacemacs-fullscreen-at-startup nil
    dotspacemacs-fullscreen-use-non-native nil
