@@ -152,6 +152,29 @@ layers configuration."
     (setq mac-command-modifier 'super)
     (setq mac-option-modifier nil))
 
+  ;; Enable Babel languages
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((awk . t)
+     (clojure . t)
+     (ditaa . t)
+     (dot . t)
+     (gnuplot . t)
+     (haskell . t)
+     (js . t)
+     (latex . t)
+     (lisp . t)
+     (ruby . t)
+     (python . t)
+     (R . t)
+     (sass . t)
+     (scala . t)
+     (sh . t)))
+
+  ;; Use cider to evaluate Clojure
+  (require 'ob-clojure)
+  (setq org-babel-clojure-backend 'cider)
+
   ;; Add magic requires that modify the namespace if a require is missing when
   ;; it's alias is used.
   (add-hook
