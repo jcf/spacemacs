@@ -180,9 +180,10 @@ layers configuration."
   (add-hook
    'clj-refactor-mode-hook
    (lambda ()
-     (push '("medley" . "medley.core") cljr-magic-require-namespaces)
-     (push '("s" . "schema.core") cljr-magic-require-namespaces)))
-  )
+     (dolist (pair '(("component" . "com.stuartsierra.component")
+                     ("medley" . "medley.core")
+                     ("s" . "schema.core")))
+       (add-to-list 'cljr-magic-require-namespaces pair)))))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
