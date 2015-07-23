@@ -175,6 +175,25 @@ layers configuration."
   (require 'ob-clojure)
   (setq org-babel-clojure-backend 'cider)
 
+  ;; Use escape to quit, and not as a meta-key.
+  (defun jcf-minibuffer-keyboard-quit ()
+    "Abort recursive edit.
+In Delete Selection mode, if the mark is active, just deactivate it;
+then it takes a second \\[keyboard-quit] to abort the minibuffer."
+    (interactive)
+    (if (and delete-selection-mode transient-mark-mode mark-active)
+        (setq deactivate-mark  t)
+      (when (get-buffer "*Completions*") (delete-windows-on "*Completions*"))
+      (abort-recursive-edit)))
+
+  (define-key evil-normal-state-map [escape] 'keyboard-quit)
+  (define-key evil-visual-state-map [escape] 'keyboard-quit)
+  (define-key minibuffer-local-map [escape] 'jcf-minibuffer-keyboard-quit)
+  (define-key minibuffer-local-ns-map [escape] 'jcf-minibuffer-keyboard-quit)
+  (define-key minibuffer-local-completion-map [escape] 'jcf-minibuffer-keyboard-quit)
+  (define-key minibuffer-local-must-match-map [escape] 'jcf-minibuffer-keyboard-quit)
+  (define-key minibuffer-local-isearch-map [escape] 'jcf-minibuffer-keyboard-quit)
+
   ;; Add magic requires that modify the namespace if a require is missing when
   ;; it's alias is used.
   (add-hook
