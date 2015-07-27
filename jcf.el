@@ -200,7 +200,8 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
   (add-hook
    'clj-refactor-mode-hook
    (lambda ()
-     (dolist (pair '(("component" . "com.stuartsierra.component")
+     (dolist (pair '(("async" . "clojure.core.async")
+                     ("component" . "com.stuartsierra.component")
                      ("medley" . "medley.core")
                      ("s" . "schema.core")))
        (add-to-list 'cljr-magic-require-namespaces pair))))
