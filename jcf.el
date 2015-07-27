@@ -66,6 +66,7 @@
                                       lfe-mode
                                       slamhound
                                       ob-lfe
+                                      ws-butler
                                       )
    dotspacemacs-excluded-packages '()
    dotspacemacs-delete-orphan-packages t))
@@ -202,7 +203,11 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
      (dolist (pair '(("component" . "com.stuartsierra.component")
                      ("medley" . "medley.core")
                      ("s" . "schema.core")))
-       (add-to-list 'cljr-magic-require-namespaces pair)))))
+       (add-to-list 'cljr-magic-require-namespaces pair))))
+
+  ;; Use ws-butler-mode in all prog/text modes
+  (add-hook 'text-mode-hook 'ws-butler-mode)
+  (add-hook 'prog-mode-hook 'ws-butler-mode))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
