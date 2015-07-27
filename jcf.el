@@ -205,9 +205,9 @@ then it takes a second \\[keyboard-quit] to abort the minibuffer."
                      ("s" . "schema.core")))
        (add-to-list 'cljr-magic-require-namespaces pair))))
 
-  ;; Use ws-butler-mode in all prog/text modes
-  (add-hook 'text-mode-hook 'ws-butler-mode)
-  (add-hook 'prog-mode-hook 'ws-butler-mode))
+  ;; Use ws-butler everywhere
+  (ws-butler-global-mode)
+  (spacemacs|diminish ws-butler-mode " ✂" " wb"))
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
